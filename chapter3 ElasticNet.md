@@ -14,6 +14,12 @@ ElasticNet 可以看作 Lasso 和 Ridge 的中庸产物，损失函数用一个�
 
 
 
+### 超参数的确定：
+
+用 ElasticNetCV 确定参数 alpha 和 $$p$$，使用的是交叉验证。
+
+使用场景：Lasso 稀疏特征过多，Ridge 回归系数衰减太慢。
+
 
 
 
