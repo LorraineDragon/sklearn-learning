@@ -35,8 +35,6 @@ SparsePCA、MiniBatchSparsePCA 使用L1正则化，仅需要对相对重要的�
 
 * 区别：MiniBatchSparsePCA使用一部分样本
 
-
-
 ## sklearn.decomposition.PCA
 
 一般不需要调参。
@@ -80,34 +78,6 @@ auto，默认值，一般不需要修改
 ### **explained\_variance\_ratio\_**
 
 降维后各主成分的方差占总方差的比例，比例越大，越重要
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
