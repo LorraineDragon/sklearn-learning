@@ -43,8 +43,6 @@ K值选取，距离量度的方式，分类决策的规则（一般为多数表�
 * 懒散学习方式，基本上不学习，预测速度比逻辑回归慢
 * 相比决策树，KNN解释性不强
 
-
-
 # sklearn
 
 近邻法相关的类库都在sklearn.neighbour中
@@ -57,7 +55,53 @@ KNN回归树：KNeighborsRegressor
 
 限定半径最近邻回归树：RadiusNeighborsRegressor
 
-最近质心分类算法：NearestCentroid
+最近质心分类算法：NearestCentroid（参数更简单，仅距离和特征选择阀值）
+
+
+
+#### kneighbors\_graph 
+
+返回KNN时和每个样本最近的K个训练集样本的位置
+
+#### radius\_neighbors\_graph
+
+返回用限定半径最近邻法时和每个样本在限定半径内的训练集样本的位置
+
+#### NearestNeighbors
+
+以上两种皆可
+
+
+
+#### n\_neighbors
+
+k值，与样本分布有关，一般选择一个较小的k值，通过交叉检验选择一个较优的k值，默认为5。如果数据是三维以下，可以通过可视化观察来调参。
+
+#### weights
+
+近邻权重。如果是knn，就是k个邻近样本的权重，如果是限定半径，就是半径以内样本的权重。{uniform，distance}
+
+{uniform}：所有权重一样，默认
+
+{distance}，权重和距离成反比，越近的近邻，越高的权重
+
+也可以自定义权重。
+
+如果样本都在相对分开的组中，选择默认，如果比较乱，选择distance
+
+### algorithm
+
+算法，{蛮力实现brute，KD树kd_tree，_球树ball\_tree, ’auto‘}
+
+如果样本是稀疏的，那么强制蛮力实现
+
+如果样本特征较少，auto
+
+如果数据量大，特征很多，kd_tree，_如果速度过慢，ball\_tree
+
+
+
+
 
 
 
