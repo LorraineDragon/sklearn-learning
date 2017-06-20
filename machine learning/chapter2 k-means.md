@@ -73,6 +73,10 @@ Calinski-Harabasz Index，对应sklearn的metrics.calinski\_harabaz\_score，类
 
 ## batch\_size
 
+Mini Batch KMeans采样集大小，默认100。如果数据集较多，或者噪音点较多，可以适当增加这个值
+
+### 其他省略。。。
+
 
 
 
