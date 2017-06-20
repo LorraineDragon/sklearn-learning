@@ -35,17 +35,13 @@
 * 采用迭代方法，得到的结果只是局部最优
 * 对噪音和异常点比较敏感
 
-
-
 # sklearn
 
 KMeans，传统算法。
 
 MiniBatchMeans，增加batch\_size 参数
 
-
-
-### n\_clusters
+## n\_clusters
 
 k值
 
@@ -55,13 +51,27 @@ k值
 
 常见的方法有轮廓系数Silhouette Coefficient和Calinski-Harabasz Index。
 
-Calinski-Harabasz Index，对应sklearn的metrics.calinski\_harabaz\_score，类别内部数据的协方差越小越好，类别之间的协方差越大越好，这样分数会高
+Calinski-Harabasz Index，对应sklearn的metrics.calinski\_harabaz\_score，类别内部数据的协方差越小越好，类别之间的协方差越大越好，这样分数会高。
 
+## max\_iter
 
+最大迭代次数，对于不是凸数据集，很难及时收敛，指定最大迭代次数，及时退出循环。
 
+## n\_init
 
+用不同的初始化质心运行算法的次数。因为k—means是局部最优，需要多跑几次选择较好的聚类，默认为10。一般不需要修改，如果k值较大，可以适当增大这个值。
 
+## init
 
+初始值的选择方式，{random，k-means++，自定义}，默认k-means++
+
+### algorithm
+
+{auto，full，elkan}
+
+稠密的数据用elkan，否则用full，一般用auto足够。
+
+## batch\_size
 
 
 
