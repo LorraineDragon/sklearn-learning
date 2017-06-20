@@ -57,9 +57,7 @@ KNN回归树：KNeighborsRegressor
 
 最近质心分类算法：NearestCentroid（参数更简单，仅距离和特征选择阀值）
 
-
-
-#### kneighbors\_graph 
+#### kneighbors\_graph
 
 返回KNN时和每个样本最近的K个训练集样本的位置
 
@@ -70,8 +68,6 @@ KNN回归树：KNeighborsRegressor
 #### NearestNeighbors
 
 以上两种皆可
-
-
 
 #### n\_neighbors
 
@@ -99,9 +95,15 @@ k值，与样本分布有关，一般选择一个较小的k值，通过交叉检
 
 如果数据量大，特征很多，kd_tree，_如果速度过慢，ball\_tree
 
+### leaf\_size
 
+停止建子树的叶子节点数量的阀值。
 
+值越小，树的层次越深，默认30。依赖于样本数量，随着样本数量的增加，这个值必须增加，否则计算时间长，容易过拟合。
 
+### Metric
+
+距离量度，一般默认欧式距离即可。
 
 
 
